@@ -4,7 +4,7 @@ import os
 # determine the directory in which to install system-wide cheatsheets
 # KLUDGE: It would be better to read `/usr/share/cheat` from `config/cheat`
 # rather than hard-coding it here
-cheat_path = os.environ.get('CHEAT_PATH') or '/usr/share/cheat'
+cheat_path = os.environ.get('CHEAT_PATH') or '~/.local/share'
 
 # aggregate the systme-wide cheatsheets
 cheat_files = []
@@ -35,6 +35,6 @@ setup(
     ],
     data_files=[
         (cheat_path, cheat_files),
-        ('/etc', ['config/cheat']),
+        ('~/.local/etc', ['config/cheat']),
     ],
 )

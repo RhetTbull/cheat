@@ -47,11 +47,12 @@ to store notes on your favorite cookie recipes, feel free.
 
 Installing
 ----------
-It is recommended to install `cheat` with `pip`:
+It is recommended to install `cheat` with [pipx](https://github.com/pipxproject/pipx):
 
 ```sh
-[sudo] pip install cheat
+pipx install --spec git+https://github.com/RhetTbull/cheat cheat
 ```
+
 
 [Other installation methods are available][installing].
 

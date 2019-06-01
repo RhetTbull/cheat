@@ -9,7 +9,7 @@ class Configuration:
         # compute the location of the config files
         config_file_path_global = self._select([
             os.environ.get('CHEAT_GLOBAL_CONF_PATH'),
-            '/etc/cheat',
+            os.path.expanduser('~/.local/etc/cheat'),
         ])
         config_file_path_local = self._select([
             os.environ.get('CHEAT_LOCAL_CONF_PATH'),

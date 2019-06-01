@@ -1,10 +1,10 @@
-from distutils.core import setup
+from setuptools import setup
 import os
 
 # determine the directory in which to install system-wide cheatsheets
 # KLUDGE: It would be better to read `/usr/share/cheat` from `config/cheat`
 # rather than hard-coding it here
-cheat_path = os.environ.get('CHEAT_PATH') or '~/.local/share'
+cheat_path = os.environ.get('CHEAT_PATH') or os.path.expanduser('~/.local/share/cheat')
 
 # aggregate the systme-wide cheatsheets
 cheat_files = []
@@ -35,6 +35,6 @@ setup(
     ],
     data_files=[
         (cheat_path, cheat_files),
-        ('~/.local/etc', ['config/cheat']),
+        (os.path.expanduser('~/.local/etc'), ['config/cheat']),
     ],
 )

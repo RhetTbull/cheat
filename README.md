@@ -50,7 +50,7 @@ Installing
 It is recommended to install `cheat` with [pipx](https://github.com/pipxproject/pipx):
 
 ```sh
-pipx install --spec git+https://github.com/RhetTbull/cheat cheat
+pipx install git+https://github.com/RhetTbull/cheat
 ```
 
 
